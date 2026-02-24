@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { signupUser } from "../services/authApi";
+import { signupUser } from "../services/api.js";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { User, Mail, Lock, UserPlus, ArrowRight } from "lucide-react";
