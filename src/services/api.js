@@ -1,7 +1,12 @@
 import axios from "axios";
 
+const baseURL =
+  import.meta.env.MODE === "production"
+    ? "https://cardmatch-backend-1.onrender.com/api"
+    : "http://localhost:5000/api";
+
 const API = axios.create({
-  baseURL: "https://cardmatch-backend-1.onrender.com/api",
+  baseURL,
 });
 
 API.interceptors.request.use((req) => {
@@ -12,20 +17,13 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-// ===============================
-// Auth APIs
-// ===============================
 export const loginUser = (data) =>
   API.post("/auth/login", data);
 
 export const signupUser = (data) =>
   API.post("/auth/signup", data);
 
-// ===============================
-// History API
-// ===============================
 export const getHistory = () =>
   API.get("/history");
 
-// Add other APIs here...
 export default API;
