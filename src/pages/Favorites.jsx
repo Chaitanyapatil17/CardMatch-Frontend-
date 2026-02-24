@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion"; // Added for smooth animations
-import { getFavorites, removeFavorite } from "../services/api";
+import { getFavorites, removeFavorite } from "../services/api.js";
 
 import {
   Card,
