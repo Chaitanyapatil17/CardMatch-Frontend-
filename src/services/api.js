@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://cardmatch-5dpg.onrender.com/api",
-  withCredentials: true,
+  baseURL: "https://cardmatch-backend-1.onrender.com/api",
 });
 
 API.interceptors.request.use((req) => {
@@ -13,15 +12,20 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-// Auth
+// ===============================
+// Auth APIs
+// ===============================
 export const loginUser = (data) =>
   API.post("/auth/login", data);
 
 export const signupUser = (data) =>
   API.post("/auth/signup", data);
 
-// History
+// ===============================
+// History API
+// ===============================
 export const getHistory = () =>
   API.get("/history");
 
-// etc...
+// Add other APIs here...
+export default API;
