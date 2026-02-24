@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getHistory } from "../services/api";
+import { getHistory } from "../services/api.js";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   History as HistoryIcon, 

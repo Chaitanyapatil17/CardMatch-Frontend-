@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 // Ensure addFavorite and removeFavorite are exported from your api service
-import { recommendCards, addFavorite } from "../services/api"; 
+import { recommendCards, addFavorite } from "../services/api.js"; 
 import { 
   Wallet, 
   CreditCard, 

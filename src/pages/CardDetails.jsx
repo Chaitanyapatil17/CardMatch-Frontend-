@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { getCardDetails } from "../services/api"; 
+import { getCardDetails } from "../services/api.js"; 
 import { ArrowLeft, CheckCircle2, CreditCard, Zap, Calendar, Wallet, Percent } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
